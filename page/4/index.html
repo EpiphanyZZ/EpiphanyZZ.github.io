@@ -157,7 +157,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://epiphanyzz.github.io/2024/06/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://epiphanyzz.github.io/2024/06/28/HowToWriteBlog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/cat.jpg">
@@ -171,7 +171,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/06/28/hello-world/" class="post-title-link" itemprop="url">LeoZhang's study blog</a>
+            <a href="/2024/06/28/HowToWriteBlog/" class="post-title-link" itemprop="url">如何使用Hexo写Blog</a>
         </h2>
 
         <div class="post-meta">
@@ -182,7 +182,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-06-28 09:11:58 / 修改时间：13:04:00" itemprop="dateCreated datePublished" datetime="2024-06-28T09:11:58+08:00">2024-06-28</time>
+              <time title="创建时间：2024-06-28 12:00:00 / 修改时间：13:37:43" itemprop="dateCreated datePublished" datetime="2024-06-28T12:00:00+08:00">2024-06-28</time>
             </span>
 
           
@@ -196,7 +196,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Time-will-tell"><a href="#Time-will-tell" class="headerlink" title="Time will tell."></a>Time will tell.</h1>
+          <h1 id="如何使用Hexo写Blog"><a href="#如何使用Hexo写Blog" class="headerlink" title="如何使用Hexo写Blog"></a>如何使用Hexo写Blog</h1><p>在 Hexo 使用 Next 主题写文章并上传到博客的过程如下：</p>
+<h3 id="1-安装-Hexo-和-Next-主题"><a href="#1-安装-Hexo-和-Next-主题" class="headerlink" title="1. 安装 Hexo 和 Next 主题"></a>1. 安装 Hexo 和 Next 主题</h3><p>首先，确保已经安装了 Hexo 并配置好了 Next 主题。如果还没有安装，可以按照以下步骤进行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 Hexo</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个新的 Hexo 项目</span></span><br><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载 Next 主题</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改 Hexo 的配置文件 _config.yml，将主题设为 next</span></span><br><span class="line">sed -i <span class="string">&#x27;&#x27;</span> <span class="string">&#x27;s/theme: .*/theme: next/&#x27;</span> _config.yml</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-编写文章"><a href="#2-编写文章" class="headerlink" title="2. 编写文章"></a>2. 编写文章</h3><p>可以通过 Hexo 提供的命令快速创建新的文章。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这将在 <code>source/_posts/</code> 目录下创建一个新的 Markdown 文件，文件名通常是文章标题的格式化形式（例如：<code>my-new-post.md</code>）。编辑这个文件来编写您的文章内容。</p>
+<h3 id="3-编辑文章"><a href="#3-编辑文章" class="headerlink" title="3. 编辑文章"></a>3. 编辑文章</h3><p>打开 <code>source/_posts/my-new-post.md</code> 文件，按照以下格式编辑：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">My</span> <span class="string">New</span> <span class="string">Post</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2024-06-28 12:00:00</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Tag1</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Tag2</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Category1</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">这里是文章内容。</span></span><br></pre></td></tr></table></figure>
+
+<p>您可以使用 Markdown 语法来编写文章内容。</p>
+<h3 id="4-生成静态文件"><a href="#4-生成静态文件" class="headerlink" title="4. 生成静态文件"></a>4. 生成静态文件</h3><p>编写好文章后，生成静态文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-部署到服务器"><a href="#5-部署到服务器" class="headerlink" title="5. 部署到服务器"></a>5. 部署到服务器</h3><p>Hexo 提供了多种部署方式，最常用的是将博客部署到 GitHub Pages。需要在 <code>_config.yml</code> 中配置部署信息。例如，如果使用 GitHub Pages，配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/username/repo.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+
+<p>配置好之后，安装 <code>hexo-deployer-git</code> 插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后运行以下命令进行部署：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-整个流程命令总结"><a href="#6-整个流程命令总结" class="headerlink" title="6. 整个流程命令总结"></a>6. 整个流程命令总结</h3><p>总结一下，写文章并上传的完整流程命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建新文章</span></span><br><span class="line">hexo new post <span class="string">&quot;My New Post&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑文章 (手动编辑 source/_posts/my-new-post.md)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署到服务器</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>通过以上步骤，您就可以在 Hexo 中使用 Next 主题编写文章并将其上传到服务器。</p>
+
       
     </div>
 
